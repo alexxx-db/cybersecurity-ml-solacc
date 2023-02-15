@@ -1,0 +1,25 @@
+-- Databricks notebook source
+-- MAGIC %md
+-- MAGIC 
+-- MAGIC # Welcome to the Databricks Security Demo Example Notebook
+-- MAGIC 
+-- MAGIC ## Goal
+-- MAGIC 
+-- MAGIC The goal of this demo is to show a few simple examples of how you can ingest Process Launch data into Databricks, run detections on that data, aggregate your signals (those noisy alerts) and even do a little hunting. This is a small subset of all of the Databricks capabilities for security (and even a subset of the ones we can show you tomorrow if you give us a call!), but it will hopefully get the wheels turning around what's possible.
+-- MAGIC 
+-- MAGIC ## Notebooks Included
+-- MAGIC 
+-- MAGIC * **Ingest BOTS Sysmon Process Launch**: Start Here. This will download data from the Boss of the SOC dataset and put it into a few tables.
+-- MAGIC * **Example Detection**: Provides a simplifed example of a security detection with MLflow.
+-- MAGIC * **Process Launch**: This is the core notebook that runs the security alerts and generates the overall force-directed viz.
+-- MAGIC * **Process Investigator**: This notebook allows you to insert a process_guid and get the great-grandparent through great-grandchild and siblings through second-cousin processes.
+-- MAGIC * **Powershell Empire Hunt**: This notebook provides an example of how you can go from a blog post to finding and scoping bad activity in your environment using just SQL
+-- MAGIC * **Helper Functions**: Not directly accessed, but used by many of the background functions.
+-- MAGIC 
+-- MAGIC ## Installation
+-- MAGIC 
+-- MAGIC This demo leverages PyVis and MLflow. Make sure that you have the pyvis python library installed on your cluster, and either mlflow (or use the Databricks ML Runtime!). Run the Ingest notebook first, and then any other notebook should work. 
+-- MAGIC 
+-- MAGIC ## Credits
+-- MAGIC 
+-- MAGIC Thank you to Splunk for open sourcing the Boss of the SOC dataset! This is a great resource for the entire security community. If you're unfamiliar with Boss of the SOC and like security, check out Boss of the SOC ([background](https://www.splunk.com/en_us/blog/security/what-you-need-to-know-about-boss-of-the-soc.html)), and you can find the full datasets on Github (in fact, three years of datasets! [v1](https://github.com/splunk/botsv1), [v2](https://github.com/splunk/botsv2), [v3](https://github.com/splunk/botsv3)). Shout out to the BOTSFathers in Alpha Order: [Brodsky](https://twitter.com/james_brodsky) [Herrald](https://twitter.com/daveherrald), [Kovar](https://twitter.com/meansec), [Stoner](https://twitter.com/stonerpsu).
